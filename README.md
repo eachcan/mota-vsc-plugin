@@ -1,0 +1,1 @@
+A vscode plugin for highlighting the mota files in the editor.

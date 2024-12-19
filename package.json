@@ -1,0 +1,51 @@
+{
+  "name": "mota-syntax",
+  "displayName": "Mota Syntax",
+  "description": "Syntax highlighting for Mota language",
+  "version": "0.0.2",
+  "publisher": "Jinshuai Zhang",
+  "engines": {
+    "vscode": "^1.93.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "mota",
+        "aliases": [
+          "Mota",
+          "mota"
+        ],
+        "extensions": [
+          ".mota"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "mota",
+        "scopeName": "source.mota",
+        "path": "./syntaxes/mota.tmLanguage.json"
+      }
+    ]
+  },
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "scripts": {
+    "compile": "tsc -p ./",
+    "package": "vsce package",
+    "publish": "vsce publish"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@types/vscode": "^1.93.0",
+    "typescript": "^4.9.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eachcan/mota-syntax-vscode"
+  }
+}

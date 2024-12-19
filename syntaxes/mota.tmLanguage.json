@@ -1,0 +1,93 @@
+{
+	"fileTypes": ["mota"],
+	"name": "Mota",
+	"patterns": [
+	  {
+		"name": "comment.block.documentation.mota",
+		"begin": "/\\*",
+		"end": "\\*/",
+		"captures": {
+		  "0": {
+			"name": "comment.block.documentation.mota"
+		  }
+		}
+	  },
+	  {
+		"name": "comment.line.double-slash.mota",
+		"match": "//.*$"
+	  },
+	  {
+		"name": "string.quoted.double.mota",
+		"begin": "\"",
+		"end": "\"",
+		"patterns": [
+		  {
+			"name": "constant.character.escape.mota",
+			"match": "\\\\."
+		  }
+		]
+	  },
+	  {
+		"name": "keyword.control.mota",
+		"match": "\\b(optional|repeated|map|struct|block|enum|namespace|include)\\b"
+	  },
+	  {
+		"match": "(struct|block) *([A-Za-z_][A-Za-z0-9_]*)\\s*",
+		"captures": {
+		  "2": {
+			"name": "entity.name.type.mota"
+		  }
+		}
+	  },
+	  {
+		"name": "support.constant.mota",
+		"match": "\\b(file|format|region)\\b"
+	  },
+	  {
+		"match": "(@)(\\[)([^\\]]*)(\\])",
+		"captures": {
+		  "1": {
+			"name": "punctuation.definition.annotation.mota"
+		  },
+		  "2": {
+			"name": "punctuation.definition.annotation-arguments.begin.bracket"
+		  },
+		  "3": {
+			"name": "variable.other.annotation-arguments.mota",
+			"match": "([A-Za-z_][A-Za-z0-9_]*)\\s*=",
+			"captures": {
+			  "1": {
+				"name": "variable.other.annotation-arguments.key.mota"
+			  }
+			}
+		  },
+		  "4": {
+			"name": "punctuation.definition.annotation-arguments.end.bracket"
+		  }
+		}
+	  },
+	  {
+		"name": "storage.type.mota",
+		"match": "\\b(int32|int64|float32|float64|bool|string|bytes)\\b"
+	  },
+	  {
+		"name": "variable.other.mota",
+		"match": "\\b[A-Za-z_][A-Za-z0-9_]*\\b"
+	  },
+	  {
+		"name": "punctuation.separator.key-value.mota",
+		"match": "="
+	  },
+	  {
+		"name": "punctuation.definition.comment.mota",
+		"match": "\\[.*\\]"
+	  },
+	  {
+		"name": "constant.numeric.mota",
+		"match": "\\b\\d+\\b"
+	  }
+	],
+	"repository": {},
+	"scopeName": "source.mota"
+  }
+  

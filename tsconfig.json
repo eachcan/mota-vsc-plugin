@@ -1,0 +1,14 @@
+﻿{
+    "compilerOptions": {
+      "target": "ES6",
+      "module": "CommonJS",
+      "outDir": "./out",
+      "rootDir": "./src",
+      "strict": true,
+      "esModuleInterop": true,
+      "types": ["node", "vscode"],  // 确保包含 'node' 和 'vscode'
+      "typeRoots": ["./node_modules/@types"]  // 确保从正确的路径查找类型定义
+    },
+    "include": ["src/**/*.ts"]
+  }
+  
