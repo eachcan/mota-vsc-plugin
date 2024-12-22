@@ -2,7 +2,7 @@
   "name": "mota-syntax",
   "displayName": "Mota Syntax",
   "description": "Syntax highlighting for Mota language",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "publisher": "Jinshuai Zhang",
   "engines": {
     "vscode": "^1.93.0"

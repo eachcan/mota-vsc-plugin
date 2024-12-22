@@ -68,7 +68,7 @@
 	  },
 	  {
 		"name": "storage.type.mota",
-		"match": "\\b(int32|int64|float32|float64|bool|string|bytes)\\b"
+		"match": "\\b(int8|int16|int32|int64|float32|float64|bool|string|bytes|true|false)\\b"
 	  },
 	  {
 		"name": "variable.other.mota",
